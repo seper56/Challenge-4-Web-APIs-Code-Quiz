@@ -1,0 +1,63 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Chef Pop Quiz!</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+<body>
+    <!--Highscore and timer header-->
+    <header>
+        <div class="menu">
+            <a href="#" id="viewHighScores">High Scores</a>
+        </div>
+        <div class="timer">
+            Time left: <span id="timer">30</span>
+        </div>
+    </header>
+    <main>
+        <section class="quizStart">
+            <h1 class="sectionTitle">Kitchen Fun Facts</h1>
+            <p>Test your knowledge against some fun Chef related questions! Good luck!</p>
+            <button id="startQuiz" class="btn">Start Quiz</button>
+        </section>
+        <section class="questionView hidden">
+            <div class="questionText">
+                <h1 id="questionText" class="sectionTitle">This is where the question's text will go!</h1>
+            </div>
+            <div class="questionAnswers">
+                <ul class="answerChoices">
+                    <li class="answerChoice" id="choice1">Choice 1</li>
+                    <li class="answerChoice" id="choice2">Choice 2</li>
+                    <li class="answerChoice" id="choice3">Choice 3</li>
+                    <li class="answerChoice" id="choice4">Choice 4</li>
+                </ul>
+            </div>
+            <div class="answerDisplay" id="answerDisplay">
+                <h2 class="hidden">Answer Indication</h2>
+            </div>
+        </section>
+        <section class="highScoresForm hidden">
+            <h1 class="sectionTitle">All done!</h1>
+            <p id="yourScore">Your final score is 22.</p>
+            <form id="hsForm">
+                <label for="initials">Enter Initials:</label>
+                <input type="text" id="initials" placeholder="" name="initials">
+                <button class="form-btn" type="submit">Submit</button>
+            </form>
+        </section>
+       
+        <section class="highScores hidden">
+            <h1 class="sectionTitle">High scores</h1>
+            <ol id="scoreHolder">
+            </ol>
+            <div class="hsButtons">
+                <button class="hsBtn" id="goBackBtn">Go Back</button>
+                <button class="hsBtn" id="clearBtn">Clear High Scores</button>
+            </div>
+        </section>
+    </main>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
