@@ -220,11 +220,11 @@ function showQuestion(question) {
     }
 
     questionText.innerHTML = question.text;
-    choice1.innerHTML = question.choices[0].text;
-    choice2.innerHTML = question.choices[1].text;
-    choice3.innerHTML = question.choices[2].text;
-    choice4.innerHTML = question.choices[3].text;
-    choice5.innerHTML = question.choices[4].text;
+    choice1.innerHTML = question.choices[1].text;
+    choice2.innerHTML = question.choices[2].text;
+    choice3.innerHTML = question.choices[3].text;
+    choice4.innerHTML = question.choices[4].text;
+    choice5.innerHTML = question.choices[5].text;
 }
 
 //This function moves the user to the next question
