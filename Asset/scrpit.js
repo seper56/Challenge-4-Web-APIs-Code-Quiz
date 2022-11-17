@@ -100,12 +100,11 @@ var choice1 = document.getElementById('choice1');
 var choice2 = document.getElementById('choice2');
 var choice3 = document.getElementById('choice3');
 var choice4 = document.getElementById('choice4');
-var choice5 = document.getElementById('choice5');
 var questionText = document.getElementById('questionText');
 var answerDisplay = document.getElementById('answerDisplay');
 var hsForm = document.getElementById('hsForm');
 var yourScore = document.getElementById('yourScore');
-var choiceButtons = [choice1, choice2, choice3, choice4, choice5];
+var choiceButtons = [choice1, choice2, choice3, choice4,];
 
 //sets up post quiz results
 var initialsField = document.getElementById('initials');
@@ -117,7 +116,7 @@ var timerDisplay = document.getElementById('timer');
 var showTime = null;
 var sectionArray = [quizStartSec, questionViewSec, highScorseFormSec, highScoresSec];
 var questions = [question1, question2, question3, question4 ,question5];
-var timeLeft = 45;
+var timeLeft = 30;
 var score = 0;
 var highScores = [];
 var currentQuestion = 0;
@@ -168,10 +167,6 @@ choice4.addEventListener("click", function() {
     answerSelected(questions[currentQuestion].choices[3].status);
 });
 
-choice5.addEventListener("click", function() {
-    choice5.classList.add('selectedBtn');
-    answerSelected(questions[currentQuestion].choices[4].status);
-});
 
 //function that checks if time has expired, counts down clock by 1 second intervals.
 function startTimer() {
@@ -224,7 +219,7 @@ function showQuestion(question) {
     choice2.innerHTML = question.choices[1].text;
     choice3.innerHTML = question.choices[2].text;
     choice4.innerHTML = question.choices[3].text;
-    choice5.innerHTML = question.choices[4].text;
+
 }
 
 //This function moves the user to the next question
@@ -233,7 +228,7 @@ function nextQuestion() {
     choice2.classList.remove('selectedBtn');
     choice3.classList.remove('selectedBtn');
     choice4.classList.remove('selectedBtn');
-    choice5.classList.remove('selectedBtn');
+    
     if(currentQuestion < questions.length - 1) {
         currentQuestion++;
         showQuestion(questions[currentQuestion]);
@@ -276,14 +271,14 @@ function disableButtons() {
     choice2.classList.add('disableBtn');
     choice3.classList.add('disableBtn');
     choice4.classList.add('disableBtn');
-    choice5.classList.add('disableBtn');
+    
 }
 function enableButtons() {
     choice1.classList.remove('disableBtn');
     choice2.classList.remove('disableBtn');
     choice3.classList.remove('disableBtn');
     choice4.classList.remove('disableBtn');
-    choice5.classList.remove('disableBtn');
+   
 }
 
 //Add yourself to highscores
@@ -317,7 +312,7 @@ function populateScores() {
 //Resets quiz but saves the highscores
 function resetValues() {
     score = 0;
-    timeLeft = 45;
+    timeLeft = 30;
     timerDisplay.innerHTML = timeLeft;
     currentQuestion = 0;
     initialsField.value = "";
