@@ -317,7 +317,7 @@ function populateScores() {
 //Resets quiz but saves the highscores
 function resetValues() {
     score = 0;
-    timeLeft = 30;
+    timeLeft = 45;
     timerDisplay.innerHTML = timeLeft;
     currentQuestion = 0;
     initialsField.value = "";
