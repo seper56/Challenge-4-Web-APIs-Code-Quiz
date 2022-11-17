@@ -105,7 +105,7 @@ var questionText = document.getElementById('questionText');
 var answerDisplay = document.getElementById('answerDisplay');
 var hsForm = document.getElementById('hsForm');
 var yourScore = document.getElementById('yourScore');
-var choiceButtons = [choice1, choice2, choice3, choice4];
+var choiceButtons = [choice1, choice2, choice3, choice4, choice5];
 
 //sets up post quiz results
 var initialsField = document.getElementById('initials');
@@ -116,8 +116,8 @@ var scoreHolder = document.getElementById('scoreHolder');
 var timerDisplay = document.getElementById('timer');
 var showTime = null;
 var sectionArray = [quizStartSec, questionViewSec, highScorseFormSec, highScoresSec];
-var questions = [question1, question2, question3, question4];
-var timeLeft = 30;
+var questions = [question1, question2, question3, question4 ,question5];
+var timeLeft = 45;
 var score = 0;
 var highScores = [];
 var currentQuestion = 0;
@@ -169,8 +169,8 @@ choice4.addEventListener("click", function() {
 });
 
 choice5.addEventListener("click", function() {
-    choice4.classList.add('selectedBtn');
-    answerSelected(questions[currentQuestion].choices[3].status);
+    choice5.classList.add('selectedBtn');
+    answerSelected(questions[currentQuestion].choices[4].status);
 });
 
 //function that checks if time has expired, counts down clock by 1 second intervals.
